@@ -5,7 +5,7 @@ const Header = () =>{
     
     return(
         
-        <header className="header">
+        <header className="header" id="Home">
 
             <div className="logos">
                 <i className="bi bi-android "></i>
@@ -13,9 +13,9 @@ const Header = () =>{
             </div> 
                 
             <nav className="nav justify-content-center gap-3 fs-5 fw-bold">
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="#" onClick={(e) => scrollToSection(e, "Home")}>Home</a></li>
+                <li><a href="#" onClick={(e) => scrollToSection(e, "about")}>About Us</a></li>
+                <li><a href="#" onClick={(e) => scrollToSection(e, "footer")}>Contact Us</a></li>
             </nav>
 
         </header>
@@ -25,5 +25,10 @@ const Header = () =>{
 
     )
 }
+
+const scrollToSection = (e, sectionId) => {
+    e.preventDefault(); 
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+  };
 
 export default Header;

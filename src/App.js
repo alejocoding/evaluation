@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Header from './pages/header';
 import Imagen from './pages/content';
 import About from './pages/about';
+import Footer from './pages/footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Header/>
      <Imagen/>
      <About/>
+     <Footer/>
     </div>
   );
 }
